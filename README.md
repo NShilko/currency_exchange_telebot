@@ -32,7 +32,7 @@
 4. Для запуска в фоновом режиме можете использовать метод [nohup](https://janakiev.com/blog/python-background/):
 ```bash
   cd .../app
-  nohup python3 main.py
+  nohup python3 main.py &
 ```
 ## Screenshots
 
