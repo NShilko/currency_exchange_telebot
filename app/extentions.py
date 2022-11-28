@@ -48,7 +48,7 @@ class GetExchange:
                 currency_amount = '1'
             else:
                 currency_amount = data[2].replace(',', '.')
-            if not isinstance(currency_amount, int) and isinstance(currency_amount, float):
+            if not currency_amount.replace('.', '').isdigit():
                 raise exeptions.ErrWrongValue(f'User try to put [ {currency_amount} ] in to currency_amount')
 
             url = f'https://api.exchangerate.host/convert?from={currency_from}&to={currency_to}&amount={currency_amount}'
